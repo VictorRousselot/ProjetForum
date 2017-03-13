@@ -37,11 +37,12 @@ public class CreationUtilisateur extends HttpServlet {
 
          */
 
-        String nom = request.getParameter( "CHAMP_NOM" );
-        String prenom = request.getParameter( "CHAMP_PRENOM" );
-        String adresse = request.getParameter( "CHAMP_ADRESSE" );
-        String telephone = request.getParameter( "CHAMP_TELEPHONE" );
-        String email = request.getParameter( "CHAMP_EMAIL" );
+        String nom = request.getParameter( CHAMP_NOM );
+        String prenom = request.getParameter( CHAMP_PRENOM );
+        String adresse = request.getParameter( CHAMP_ADRESSE );
+        String telephone = request.getParameter( CHAMP_TELEPHONE );
+        String email = request.getParameter( CHAMP_EMAIL );
+        
         String message;
         boolean erreur;
         /*

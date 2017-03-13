@@ -12,14 +12,17 @@
        <c:import url="menu.jsp" />
        <div id="corps">
         <p class="info">${ message }</p>
+        
         <c:if test="${ !erreur }">
+        
         <p>Nom : <c:out value="${ utilisateur.nom }"/></p>
         <p>Prénom : <c:out value="${ utilisateur.prenom }"/></p>
         <p>Adresse : <c:out value="${ utilisateur.adresse }"/></p>
         <p>Numéro de téléphone : <c:out value="${ utilisateur.telephone }"/></p>
         <p>Email : <c:out value="${ utilisateur.email }"/></p>
     	
-    		</c:if>
+    	</c:if>
+    	
     	</div>
     </body>
 </html> 

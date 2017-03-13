@@ -8,7 +8,7 @@
         <link type="text/css" rel="stylesheet" href="style.css" />
     </head>
     <body>
-                <c:import url="menu.jsp" />
+        <c:import url="menu.jsp" />
         <div>
             <form method="get" action="<c:url value="/creationUtilisateur"/>">
                 <fieldset>
