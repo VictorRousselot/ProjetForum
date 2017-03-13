@@ -10,7 +10,11 @@ import com.sdzee.beans.Utilisateur;
 
 public class CreationUtilisateur extends HttpServlet {
 
-    public static final String CHAMP_NOM       = "nomUtilisateur";
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public static final String CHAMP_NOM       = "nomUtilisateur";
     public static final String CHAMP_PRENOM    = "prenomUtilisateur";
     public static final String CHAMP_ADRESSE   = "adresseUtilisateur";
     public static final String CHAMP_TELEPHONE = "telephoneUtilisateur";

@@ -11,18 +11,10 @@
         <servlet-name>CreationUtilisateur</servlet-name>
         <servlet-class>com.sdzee.servlets.CreationUtilisateur</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>CreationClient</servlet-name>
-        <servlet-class>com.sdzee.servlets.CreationClient</servlet-class>
-    </servlet>
     
     <servlet-mapping>
         <servlet-name>CreationUtilisateur</servlet-name>
         <url-pattern>/creationUtilisateur</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>CreationClient</servlet-name>
-        <url-pattern>/creationClient</url-pattern>
     </servlet-mapping>
 
 </web-app>

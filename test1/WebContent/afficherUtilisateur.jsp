@@ -1,4 +1,5 @@
 <%@ page pageEncoding="UTF-8" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,6 +9,8 @@
     </head>
     <body>
         <%-- Affichage de la chaîne "message" transmise par la servlet --%>
+       <c:import url="menu.jsp" />
+       <div id="corps">
         <p class="info">${ message }</p>
         <c:if test="${ !erreur }">
         <p>Nom : <c:out value="${ utilisateur.nom }"/></p>
@@ -15,5 +18,8 @@
         <p>Adresse : <c:out value="${ utilisateur.adresse }"/></p>
         <p>Numéro de téléphone : <c:out value="${ utilisateur.telephone }"/></p>
         <p>Email : <c:out value="${ utilisateur.email }"/></p>
+    	
+    		</c:if>
+    	</div>
     </body>
-</html>
+</html> 
