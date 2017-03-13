@@ -7,7 +7,7 @@
         <title>Forum - Reigns</title>
         <link type="text/css" rel="stylesheet" href="style.css" />
     </head>
-    <body background="chimpanze.jpg">
+    <body>
         <c:import url="menu.jsp" />
             </body>
 </html> 
