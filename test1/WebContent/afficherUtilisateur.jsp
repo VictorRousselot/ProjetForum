@@ -15,11 +15,11 @@
         
         <c:if test="${ !erreur }">
         
-        <p>Nom : <c:out value="${ utilisateur.nom }"/></p>
-        <p>Prénom : <c:out value="${ utilisateur.prenom }"/></p>
-        <p>Adresse : <c:out value="${ utilisateur.adresse }"/></p>
-        <p>Numéro de téléphone : <c:out value="${ utilisateur.telephone }"/></p>
-        <p>Email : <c:out value="${ utilisateur.email }"/></p>
+        <p>Nom : <c:out value="${ Utilisateur.nom }"/></p>
+        <p>Prénom : <c:out value="${ Utilisateur.prenom }"/></p>
+        <p>Adresse : <c:out value="${ Utilisateur.adresse }"/></p>
+        <p>Numéro de téléphone : <c:out value="${ Utilisateur.telephone }"/></p>
+        <p>Email : <c:out value="${ Utilisateur.email }"/></p>
     	
     	</c:if>
     	
