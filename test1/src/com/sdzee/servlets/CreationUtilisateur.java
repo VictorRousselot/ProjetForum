@@ -16,10 +16,10 @@ public class CreationUtilisateur extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static final String CHAMP_NOM       = "nomUtilisateur";
     public static final String CHAMP_PRENOM    = "prenomUtilisateur";
-    public static final String CHAMP_ADRESSE   = "adresseUtilisateur";
-    public static final String CHAMP_TELEPHONE = "telephoneUtilisateur";
     public static final String CHAMP_EMAIL     = "emailUtilisateur";
- 
+    public static final String CHAMP_PSEUDO     = "pseudoUtilisateur";
+    public static final String CHAMP_MDP     = "mdpUtilisateur"; 
+    
     public static final String ATT_UTILISATEUR      = "Utilisateur";
     public static final String ATT_MESSAGE     = "message";
     public static final String ATT_ERREUR      = "erreur";
@@ -39,9 +39,9 @@ public class CreationUtilisateur extends HttpServlet {
 
         String nom = request.getParameter( CHAMP_NOM );
         String prenom = request.getParameter( CHAMP_PRENOM );
-        String adresse = request.getParameter( CHAMP_ADRESSE );
-        String telephone = request.getParameter( CHAMP_TELEPHONE );
         String email = request.getParameter( CHAMP_EMAIL );
+        String pseudo = request.getParameter( CHAMP_PSEUDO );
+        String mdp = request.getParameter( CHAMP_MDP );
         
         String message;
         boolean erreur;
@@ -55,7 +55,7 @@ public class CreationUtilisateur extends HttpServlet {
 
          */
 
-        if ( nom.trim().isEmpty() || adresse.trim().isEmpty() || telephone.trim().isEmpty() ) {
+        if ( nom.trim().isEmpty() || pseudo.trim().isEmpty() || email.trim().isEmpty() || mdp.trim().isEmpty() ) {
             message = "Erreur - Vous n'avez pas rempli tous les champs obligatoires. <br> <a href=\"creationUtilisateur.jsp\">Cliquez ici</a> pour accéder au formulaire de création d'un utilisateur.";
             erreur=true;
         } else 
@@ -73,9 +73,9 @@ public class CreationUtilisateur extends HttpServlet {
         Utilisateur utilisateur = new Utilisateur();
         utilisateur.setNom( nom );
         utilisateur.setPrenom( prenom );
-        utilisateur.setAdresse( adresse );
-        utilisateur.setTelephone( telephone );
         utilisateur.setEmail( email );
+        utilisateur.setPseudo( pseudo );
+        utilisateur.setMdp( mdp );
 
         /* Ajout du bean et du message à l'objet requête */
 

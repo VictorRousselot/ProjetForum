@@ -17,9 +17,9 @@
         
         <p>Nom : <c:out value="${ Utilisateur.nom }"/></p>
         <p>Prénom : <c:out value="${ Utilisateur.prenom }"/></p>
-        <p>Adresse : <c:out value="${ Utilisateur.adresse }"/></p>
-        <p>Numéro de téléphone : <c:out value="${ Utilisateur.telephone }"/></p>
+        <p>Pseudo : <c:out value="${ Utilisateur.pseudo }"/></p>
         <p>Email : <c:out value="${ Utilisateur.email }"/></p>
+        <p>Mdp : <c:out value="${ Utilisateur.mdp }"/></p>
     	
     	</c:if>
     	

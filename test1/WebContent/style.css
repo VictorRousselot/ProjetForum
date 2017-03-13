@@ -92,7 +92,17 @@ form input.sansLabel {
 div#menu{
 	border: 1px solid #0568CD;
 	padding: 10px;
-	margin: 10px;
+	margin: 20px;
+}
+div#user{
+	position:absolute;
+	right:30px;
+	top:20px;	
+}
+div#titre{
+	position:absolute;
+	left:30px;
+	top:20px;
 }
 div#corps{
 	margin: 10px;

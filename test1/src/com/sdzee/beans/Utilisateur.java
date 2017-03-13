@@ -3,11 +3,11 @@ public class Utilisateur {
 
     /* Propriétés du bean */
 
-    private String nom;
+    private String pseudo;
+	private String nom;
     private String prenom;
-    private String adresse;
-    private String telephone;
     private String email;
+    private String mdp;
 
     public void setNom( String nom ) {
         this.nom = nom;
@@ -25,24 +25,6 @@ public class Utilisateur {
         return prenom;
     }
 
-    public void setAdresse( String adresse ) {
-        this.adresse = adresse;
-    }
-
-    public String getAdresse() {
-        return adresse;
-    }
-
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-
-    public void setTelephone( String telephone ) {
-        this.telephone = telephone;
-    }
-
     public void setEmail( String email ) {
         this.email = email;
     }
@@ -50,4 +32,20 @@ public class Utilisateur {
     public String getEmail() {
         return email;
     }
+    
+    public void setPseudo( String pseudo ) {
+        this.pseudo = pseudo;
+    }
+
+    public String getPseudo() {
+        return pseudo;
+    }    
+    
+    public void setMdp( String mdp ) {
+        this.mdp = mdp;
+    }
+
+    public String getMdp() {
+        return mdp;
+    }    
 }
