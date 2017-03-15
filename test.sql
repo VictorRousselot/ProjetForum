@@ -2,13 +2,19 @@ CREATE TABLE IF NOT EXISTS Utilisateur (
 pseudo VARCHAR(30) PRIMARY KEY,
 nom VARCHAR(30),
 prenom VARCHAR(30),
+<<<<<<< HEAD
 mail VARCHAR(50),
+=======
+>>>>>>> 7c65d765e5892cb677e6c7d4a17b84648c0b7e06
 mdp VARCHAR(100));
 
 CREATE TABLE IF NOT EXISTS Sujet (
 idSujet INTEGER(5) PRIMARY KEY AUTO_INCREMENT,
 libelle VARCHAR(50),
+<<<<<<< HEAD
 dateCreation DATE,
+=======
+>>>>>>> 7c65d765e5892cb677e6c7d4a17b84648c0b7e06
 createur VARCHAR(30) REFERENCES Utilisateur(pseudo) ON DELETE CASCADE); 
 
 CREATE TABLE IF NOT EXISTS Message (
