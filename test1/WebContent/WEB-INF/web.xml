@@ -19,7 +19,7 @@
 
 <servlet>
 <servlet-name>Sujets</servlet-name>
-<servlet-class>servlets.Sujets</servlet-class>
+<servlet-class>com.sdzee.servlets.Sujets</servlet-class>
 </servlet>
 
 <servlet-mapping>
@@ -29,7 +29,7 @@
 
 <servlet>
 <servlet-name>GestionTestJDBC</servlet-name>
-<servlet-class>servlets.GestionTestJDBC</servlet-class>
+<servlet-class>com.sdzee.servlets.GestionTestJDBC</servlet-class>
 </servlet>
 
 <servlet-mapping>

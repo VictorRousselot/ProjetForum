@@ -15,7 +15,7 @@ public class Sujets extends HttpServlet {
 	 */
 	public static final String CONF_DAO_FACTORY = "daofactory";
 	public static final String ATT_SUJET = "sujet";
-	public static final String VUE = "/WEB-INF/sujets.jsp";
+	public static final String VUE = "/listeForum.jsp";
 	
 	private SujetDao sujetDao;
 	
