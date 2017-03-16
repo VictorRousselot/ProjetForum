@@ -19,7 +19,7 @@ createur VARCHAR(30) REFERENCES Utilisateur(pseudo) ON DELETE CASCADE);
 
 INSERT INTO Utilisateur VALUES ("coco722", "Thebaudin", "Corentin", "babouin@babouin.ba", MD5("babouin"));
 
-INSERT INTO Utilisateur VALUES ("bigpig", "Barone", "Piero", "pig@chihuahua.gro", MD5("pigchihua");
+INSERT INTO Utilisateur VALUES ("bigpig", "Barone", "Piero", "pig@chihuahua.gro", MD5("pigchihua"));
 
 INSERT INTO Utilisateur VALUES ("maitreDArts", "Rousselot", "Victor", "lemaitre@machin.me", MD5("lemaitre"));
 
