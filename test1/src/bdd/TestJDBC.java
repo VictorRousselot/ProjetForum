@@ -27,7 +27,7 @@ public class TestJDBC {
 		/* Connexion à la base de données */
 		String url = "jdbc:mysql://localhost:3306/forum";
 		String utilisateur = "testUser";
-		String motDePasse = "ce1mdpp";
+		String motDePasse = "password";
 		Connection connexion = null;
 		Statement statement = null;
 		ResultSet resultat = null;
@@ -47,9 +47,9 @@ public class TestJDBC {
 
 			while(resultat.next()){
 				int idSujet = resultat.getInt("idSujet");
-				String nom = resultat.getString("nom");
+				String nom = resultat.getString("libelle");
 				String date = resultat.getString("dateCreation");
-				String auteur = resultat.getString("auteur");
+				String auteur = resultat.getString("createur");
 			}
 		} catch(SQLException e){
 			messages.add("Erreur lors de la connexion : <br />"+e.getMessage());

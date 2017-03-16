@@ -2,7 +2,7 @@ package dao;
 
 import java.util.ArrayList;
 
-import com.sdzee.beans.Message;
+import beans.Message;
 
 public interface MessageDao {
 	void creer (Message message) throws DAOException;

@@ -8,7 +8,7 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
 
-import com.sdzee.beans.Utilisateur;
+import beans.Utilisateur;
 
 public class UtilisateurDAOImpl implements UtilisateurDAO {
 	private DAOFactory daoFactory;

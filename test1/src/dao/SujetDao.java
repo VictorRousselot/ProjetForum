@@ -2,7 +2,7 @@ package dao;
 
 import java.util.ArrayList;
 
-import com.sdzee.beans.Sujet;
+import beans.Sujet;
 
 public interface SujetDao {
 

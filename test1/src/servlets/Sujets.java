@@ -1,12 +1,14 @@
-package com.sdzee.servlets;
+package servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import beans.Sujet;
 import dao.*;
 
 public class Sujets extends HttpServlet {
@@ -15,7 +17,7 @@ public class Sujets extends HttpServlet {
 	 */
 	public static final String CONF_DAO_FACTORY = "daofactory";
 	public static final String ATT_SUJET = "sujet";
-	public static final String VUE = "/listeForum.jsp";
+	public static final String VUE = "/sujets.jsp";
 	
 	private SujetDao sujetDao;
 	
@@ -24,6 +26,8 @@ public class Sujets extends HttpServlet {
 	}
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, IOException {
+		ArrayList<Sujet> mesSujets = new ArrayList<Sujet>();
+		mesSujets = sujetDao.recuperer();
 		request.setAttribute("maListe", sujetDao.recuperer());
 		this.getServletContext().getRequestDispatcher(VUE).forward(request, reponse);
 	}
@@ -32,4 +36,4 @@ public class Sujets extends HttpServlet {
 		this.doPost(request, reponse);
 	}
 }
- 
+

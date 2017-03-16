@@ -1,4 +1,4 @@
-package com.sdzee.beans;
+package beans;
 
 public class Message {
 	private int idMessage;
