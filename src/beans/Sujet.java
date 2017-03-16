@@ -7,21 +7,21 @@ import org.joda.time.DateTime;
 public class Sujet {
 	
 	private int idSujet;
-	private String nom;
+	private String libelle;
 	private Date dateCreation;
-	private String auteur;
+	private String createur;
 	
-	public void setIdSujet(int idSujet){
-		this.idSujet = idSujet;
-	}
-	public int getIdSujet(){
+	public int getIdSujet() {
 		return idSujet;
 	}
-	public String getNom() {
-		return nom;
+	public void setIdSujet(int idSujet) {
+		this.idSujet = idSujet;
 	}
-	public void setNom(String nom) {
-		this.nom = nom;
+	public String getLibelle() {
+		return libelle;
+	}
+	public void setLibelle(String libelle) {
+		this.libelle = libelle;
 	}
 	public Date getDateCreation() {
 		return dateCreation;
@@ -29,10 +29,10 @@ public class Sujet {
 	public void setDateCreation(Date dateCreation) {
 		this.dateCreation = dateCreation;
 	}
-	public String getAuteur() {
-		return auteur;
+	public String getCreateur() {
+		return createur;
 	}
-	public void setAuteur(String auteur) {
-		this.auteur = auteur;
+	public void setCreateur(String createur) {
+		this.createur = createur;
 	}
 }
