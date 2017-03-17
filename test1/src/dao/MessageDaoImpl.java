@@ -10,8 +10,8 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
 
-import com.sdzee.beans.Message;
-import com.sdzee.beans.Sujet;
+import beans.Message;
+import beans.Sujet;
 
 public class MessageDaoImpl implements MessageDao {
 	private DAOFactory daoFactory;

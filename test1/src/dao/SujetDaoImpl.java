@@ -10,7 +10,7 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
 
-import com.sdzee.beans.Sujet;
+import beans.Sujet;
 
 public class SujetDaoImpl implements SujetDao {
 	private DAOFactory daoFactory;
@@ -60,7 +60,7 @@ public class SujetDaoImpl implements SujetDao {
 		try {
 			/* Récupération d'une connexion depuis la Factory */
 			connexion = (Connection) daoFactory.getConnection();
-			preparedStatement = (PreparedStatement) DAOUtilitaire.initialisationRequetePreparee( connexion, SQL_INSERT, true, sujet.getNom(), sujet.getAuteur());
+			preparedStatement = (PreparedStatement) DAOUtilitaire.initialisationRequetePreparee( connexion, SQL_INSERT, true, sujet.getLibelle(), sujet.getCreateur());
 			int statut = preparedStatement.executeUpdate();
 			/* Analyse du statut retourné par la requête d'insertion */
 			if ( statut == 0 ) {
@@ -98,6 +98,7 @@ public class SujetDaoImpl implements SujetDao {
 			/* Parcours de la ligne de données de l'éventuel ResulSet retourné */
 			while ( resultSet.next() ) {
 				sujet = map( resultSet );
+				System.err.println(sujet.getLibelle());
 				sujets.add(sujet);
 			}
 		} catch ( SQLException e ) {
@@ -115,9 +116,9 @@ public class SujetDaoImpl implements SujetDao {
  */
 private static Sujet map( ResultSet resultSet ) throws SQLException {
 	Sujet sujet = new Sujet();
-	sujet.setNom( resultSet.getString( "nom" ) );
+	sujet.setLibelle( resultSet.getString( "libelle" ) );
 	sujet.setDateCreation(resultSet.getDate("dateCreation"));
-	sujet.setAuteur( resultSet.getString( "auteur" ) );
+	sujet.setCreateur(resultSet.getString("createur"));
 	return sujet;
 }
 }
