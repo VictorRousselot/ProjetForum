@@ -8,6 +8,7 @@ public class Sujet {
 	
 	private int idSujet;
 	private String libelle;
+	private String description;
 	private Date dateCreation;
 	private String createur;
 	
@@ -23,6 +24,12 @@ public class Sujet {
 	public void setLibelle(String libelle) {
 		this.libelle = libelle;
 	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 	public Date getDateCreation() {
 		return dateCreation;
 	}
@@ -35,4 +42,7 @@ public class Sujet {
 	public void setCreateur(String createur) {
 		this.createur = createur;
 	}
+	
+	
+	
 }

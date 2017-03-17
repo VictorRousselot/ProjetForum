@@ -17,7 +17,7 @@ public class SujetDaoImpl implements SujetDao {
 	private static final String SQL_SELECT_PAR_LIBELLE = "SELECT * FROM Sujet WHERE libelle = ?";
 	private static final String SQL_SELECT_ALL = "SELECT * FROM Sujet";
 	private static final String SQL_SELECT_PAR_CREATEUR = "SELECT * FROM Sujet WHERE createur = ?";
-	private static final String SQL_INSERT = "INSERT INTO Sujet (libelle, dateCreation, createur) VALUES (?, NOW(), ?)";
+	private static final String SQL_INSERT = "INSERT INTO Sujet (libelle, dateCreation, createur, description) VALUES (?, NOW(), ?, ?)";
 
 
 	SujetDaoImpl(DAOFactory daoFactory){
@@ -60,7 +60,7 @@ public class SujetDaoImpl implements SujetDao {
 		try {
 			/* Récupération d'une connexion depuis la Factory */
 			connexion = (Connection) daoFactory.getConnection();
-			preparedStatement = (PreparedStatement) DAOUtilitaire.initialisationRequetePreparee( connexion, SQL_INSERT, true, sujet.getLibelle(), sujet.getCreateur());
+			preparedStatement = (PreparedStatement) DAOUtilitaire.initialisationRequetePreparee( connexion, SQL_INSERT, true, sujet.getLibelle(), sujet.getCreateur(), sujet.getDescription());
 			int statut = preparedStatement.executeUpdate();
 			/* Analyse du statut retourné par la requête d'insertion */
 			if ( statut == 0 ) {
@@ -68,9 +68,9 @@ public class SujetDaoImpl implements SujetDao {
 			}
 			/* Récupération de l'id auto-généré par la requête d'insertion */
 			valeursAutoGenerees = preparedStatement.getGeneratedKeys();
-			if ( valeursAutoGenerees.next() ) {
+			if ( valeursAutoGenerees.next()) {
 				/* Puis initialisation de la propriété id du bean Utilisateur avec sa valeur */
-				sujet.setIdSujet( valeursAutoGenerees.getInt("idSujet"));
+				sujet.setIdSujet( valeursAutoGenerees.getInt(1));
 			} else {
 				throw new DAOException( "Échec de la création du sujet en base, aucun ID auto-généré retourné." );
 			}
