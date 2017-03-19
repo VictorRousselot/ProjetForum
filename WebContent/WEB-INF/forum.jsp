@@ -11,5 +11,5 @@
         <c:import url="menu.jsp" />
         <c:import url="creationSujet.jsp" />
         <c:import url="listeForum.jsp" />
-            </body>
+    </body>
 </html> 

@@ -31,7 +31,7 @@ public class SujetDaoImpl implements SujetDao {
 		PreparedStatement preparedStatement = null;
 		ResultSet resultSet = null;
 		Sujet sujet = null;
-		
+
 		try {
 			/* Récupération d'une connexion depuis la Factory */
 			connexion = (Connection) daoFactory.getConnection();
@@ -49,7 +49,7 @@ public class SujetDaoImpl implements SujetDao {
 
 		return sujet;
 	}
-	
+
 	/* Implémentation de la méthode définie dans l'interface UtilisateurDao */
 	@Override
 	public void creer(Sujet sujet ) throws DAOException {
@@ -68,7 +68,7 @@ public class SujetDaoImpl implements SujetDao {
 			}
 			/* Récupération de l'id auto-généré par la requête d'insertion */
 			valeursAutoGenerees = preparedStatement.getGeneratedKeys();
-			if ( valeursAutoGenerees.next()) {
+			if ( valeursAutoGenerees.next() ) {
 				/* Puis initialisation de la propriété id du bean Utilisateur avec sa valeur */
 				sujet.setIdSujet( valeursAutoGenerees.getInt(1));
 			} else {
@@ -80,7 +80,7 @@ public class SujetDaoImpl implements SujetDao {
 			DAOUtilitaire.fermeturesSilencieuses( valeursAutoGenerees, preparedStatement, connexion );
 		}
 	}
-	
+
 	@Override
 	public ArrayList<Sujet> recuperer() throws DAOException {
 		Connection connexion = null;
@@ -89,7 +89,7 @@ public class SujetDaoImpl implements SujetDao {
 		ArrayList<Sujet> sujets = new ArrayList<>();
 		Sujet sujet = null;
 		String sql = "";
-		
+
 		try {
 			/* Récupération d'une connexion depuis la Factory */
 			connexion = (Connection) daoFactory.getConnection();
@@ -109,16 +109,17 @@ public class SujetDaoImpl implements SujetDao {
 		return sujets;
 	}
 
-/*
- * Simple méthode utilitaire permettant de faire la correspondance (le
- * mapping) entre une ligne issue de la table des utilisateurs (un
- * ResultSet) et un bean Utilisateur.
- */
-private static Sujet map( ResultSet resultSet ) throws SQLException {
-	Sujet sujet = new Sujet();
-	sujet.setLibelle( resultSet.getString( "libelle" ) );
-	sujet.setDateCreation(resultSet.getDate("dateCreation"));
-	sujet.setCreateur(resultSet.getString("createur"));
-	return sujet;
-}
+	/*
+	 * Simple méthode utilitaire permettant de faire la correspondance (le
+	 * mapping) entre une ligne issue de la table des utilisateurs (un
+	 * ResultSet) et un bean Utilisateur.
+	 */
+	private static Sujet map( ResultSet resultSet ) throws SQLException {
+		Sujet sujet = new Sujet();
+		sujet.setLibelle( resultSet.getString( "libelle" ) );
+		sujet.setDateCreation(resultSet.getDate("dateCreation"));
+		sujet.setCreateur(resultSet.getString("createur"));
+		sujet.setDescription(resultSet.getString("description"));
+		return sujet;
+	}
 }

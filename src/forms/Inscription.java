@@ -81,7 +81,7 @@ public final class Inscription {
         } catch (Exception e ) {
             setErreur( CHAMP_EMAIL, e.getMessage() );
         }
-        utilisateur.setMail( email );
+        utilisateur.setEmail( email );
     }
 
     private void validationNom( String nom ) throws Exception {
