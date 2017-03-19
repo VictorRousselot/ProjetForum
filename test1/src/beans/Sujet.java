@@ -1,9 +1,6 @@
 package beans;
 
 import java.util.Date;
-
-import org.joda.time.DateTime;
-
 public class Sujet {
 	
 	private int idSujet;

@@ -12,7 +12,11 @@
             <form method="get" action="<c:url value="/listeForum"/>">
                 <fieldset>
                     <legend>Liste des sujets disponibles</legend>
-                    <c:import url="inc_liste_form.jsp" />
+                    <c:forEach items="${sujets}" var="sujet">
+                    	<label for="titreSujet">Titre du sujet <span class="requis">*</span></label>
+						<input type="text" id="titreSujet" name="titreSujet" value="${sujet.libelle}" size="30" maxlength="60" />
+						<br />
+                    </c:forEach>
                 </fieldset>
             </form>
         </div>

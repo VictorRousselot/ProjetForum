@@ -6,11 +6,10 @@
         <meta charset="utf-8" />
         <title>Forum - Reigns</title>
         <link type="text/css" rel="stylesheet" href="style.css" />
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />        
     </head>
     <body>
         <c:import url="menu.jsp" />
         <c:import url="creationSujet.jsp" />
         <c:import url="listeForum.jsp" />
-    </body>
+            </body>
 </html> 
